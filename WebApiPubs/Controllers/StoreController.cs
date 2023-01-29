@@ -95,7 +95,7 @@ namespace WebApiPubs.Controllers
         }
 
 
-        //GET: api/store/hola
+        //GET: api/store/name/juan
         [HttpGet("name/{name}")] //Ruta personalizada
         public ActionResult<IEnumerable<Store>> GetByName(string name)
         {
@@ -106,7 +106,7 @@ namespace WebApiPubs.Controllers
         }
 
 
-        //GET: api/store/rosario
+        //GET: api/store/city&state/rosario/sf
         [HttpGet("city&state/{city}/{state}")] //Ruta personalizada
         public ActionResult<IEnumerable<Store>> GetByCityState(string city, string state)
         {
@@ -118,7 +118,7 @@ namespace WebApiPubs.Controllers
         }
 
 
-        //GET: api/store/200
+        //GET: api/store/zip/200
         [HttpGet("zip/{zip}")] //Ruta personalizada
         public ActionResult<IEnumerable<Store>> GetByZip(string zip)
         {
