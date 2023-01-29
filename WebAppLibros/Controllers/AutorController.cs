@@ -75,7 +75,7 @@ namespace WebAppLibros.Controllers
 
             context.Entry(autor).State = EntityState.Modified;
             context.SaveChanges();
-            return Ok();
+            return NoContent();
         }
 
         // DELETE api/autor/1

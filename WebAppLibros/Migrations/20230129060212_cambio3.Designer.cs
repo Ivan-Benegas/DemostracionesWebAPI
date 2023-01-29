@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using WebAppLibros.Data;
 
 namespace WebAppLibros.Migrations
 {
     [DbContext(typeof(DBLibrosContext))]
-    partial class DBLibrosContextModelSnapshot : ModelSnapshot
+    [Migration("20230129060212_cambio3")]
+    partial class cambio3
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

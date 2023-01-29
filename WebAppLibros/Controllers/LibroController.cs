@@ -30,7 +30,11 @@ namespace WebAppLibros.Controllers
         [HttpGet]
         public ActionResult<IEnumerable<Libro>> Get()
         {
-            return context.Libros.ToList();
+            // return context.Libros.ToList();
+
+            var result = context.Libros.Include(x => x.Autor).ToList();
+
+            return result;
         }
 
         // GET api/libro/5
@@ -94,8 +98,8 @@ namespace WebAppLibros.Controllers
             return libro;
         }
 
-        //GET: api/libro/33
-        [HttpGet("listado/{id}")] //Ruta personalizada
+        //GET: api/libro/listadoporautorid/11
+        [HttpGet("listadoporautorid/{id}")] //Ruta personalizada
         public ActionResult<IEnumerable<Libro>> GetAutorId(int id)
         {
             List<Libro> libros = (from a in context.Libros
