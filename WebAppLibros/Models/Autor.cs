@@ -25,6 +25,7 @@ namespace WebAppLibros.Models
         [Range(18, 110, ErrorMessage = "Solo se acepta edades entre 18 y 110")]
         public int? Edad { get; set; }
 
+        [FechaMayorA01011950]
         public DateTime FechaDeNacimiento { get; set; }
 
         public List<Libro> Libros { get; set; }
